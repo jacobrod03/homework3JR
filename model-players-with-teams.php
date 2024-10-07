@@ -12,7 +12,7 @@ function selectPlayers() {
         throw $e;
     }
 }
-
+?>
 <?php
 function selectTeamByPlayer($pid) {
     try {
@@ -28,5 +28,4 @@ function selectTeamByPlayer($pid) {
         throw $e;
     }
 }
-?>
 ?>
