@@ -13,15 +13,15 @@
     </thead>
     <tbody>
 <?php
-while ($team = $teams->fetch_assoc()) {
+while ($teams = $team->fetch_assoc()) {
 ?>
   <tr>
-    <td><?php echo $team['team_id']; ?></td>
-    <td><?php echo $team['team_name']; ?></td>
-    <td><?php echo $team['team_number']; ?></td>
-    <td><?php echo $team['season']; ?></td>
-    <td><?php echo $team['location']; ?></td>
-    <td><?php echo $team['daytime']; ?></td>
+    <td><?php echo $teams['team_id']; ?></td>
+    <td><?php echo $teams['team_name']; ?></td>
+    <td><?php echo $teams['team_number']; ?></td>
+    <td><?php echo $teams['season']; ?></td>
+    <td><?php echo $teams['location']; ?></td>
+    <td><?php echo $teams['daytime']; ?></td>
   </tr>
   <?php
 }
