@@ -2,7 +2,7 @@
 function get_db_connection(){
     // Create connection
     $servername = "hw3mis4013.mysql.database.azure.com";
-    $username = "hw3jjr";
+    $username = "HW3JR";
     $password = "Database3909";
     $dbname = "hw3db";
     $port = 3306;
