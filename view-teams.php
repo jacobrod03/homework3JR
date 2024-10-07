@@ -11,12 +11,12 @@
     </thead>
     <tbody>
 <?php
-while ($team = $team->fetch_assoc()) {
+while ($teams = $team->fetch_assoc()) {
 ?>
   <tr>
-    <td><?php echo $player['team_id']; ?></td>
-    <td><?php echo $player['team_name']; ?></td>
-    <td><?php echo $player['team_number']; ?></td>
+    <td><?php echo $teams['team_id']; ?></td>
+    <td><?php echo $teams['team_name']; ?></td>
+    <td><?php echo $teams['team_number']; ?></td>
     <td>
       <form method="post" action="leagues-by-team.php">
         <input type="hidden" name="tid" value="<?php echo $player['team_id']; ?>">
