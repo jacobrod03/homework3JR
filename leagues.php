@@ -4,7 +4,7 @@ require_once("model-leagues.php");
 
 $pageTitle = "Leagues";
 include "view-header.php";
-$league = selectLeague();
+$leagues = selectLeague();
 include "view-leagues.php";
 include "view-footer.php";
 ?>
