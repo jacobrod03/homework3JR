@@ -32,7 +32,21 @@ function selectTeamsByPlayer($pid) {
 function selectPlayersForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("select player_id, player_name, player_number FROM player");
+        $stmt = $conn->prepare("select player_id, player_name FROM player order by player_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectTeamsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("select team_id, team_name FROM team order by team_name");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
