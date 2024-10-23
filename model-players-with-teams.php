@@ -28,4 +28,6 @@ function selectTeamsByPlayer($pid) {
         throw $e;
     }
 }
+
+function insertLeagues
 ?>
