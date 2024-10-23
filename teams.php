@@ -9,14 +9,14 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
       case "Add":
         if (insertTeam($_POST['tName'], $_POST['tNumber'])) {
-          echo '<div class="alert alert-success" role="alert">Team added.</div>"';
+          echo '<div class="alert alert-success" role="alert">Team added.</div>';
         } else {
           echo '<div class="alert alert-danger" role="alert">Error.</div>';
         }
         break;
       case "Delete":
         if (deleteTeam($_POST['tid'])) {
-          echo '<div class="alert alert-success" role="alert">Team deleted.</div>"';
+          echo '<div class="alert alert-success" role="alert">Team deleted.</div>';
         } else {
           echo '<div class="alert alert-danger" role="alert">Error.</div>';
         }
