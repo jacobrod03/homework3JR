@@ -29,7 +29,7 @@ function selectTeamsByPlayer($pid) {
     }
 }
 //might not need?
-function insertLeagues($pid, $tid, $season, $location, $daytime) {
+function insertLeague($pid, $tid, $season, $location, $daytime) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `hw3`.`league` (`league_id`, `player_id`, `team_id`, `season`, `location`, `daytime`) VALUES (?, ?, ?, ?, ?, ?);");
