@@ -7,9 +7,9 @@ include "view-header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
-  case "Add":
-    insertTeam($_POST['tName'], $_POST['tNumber']);
-    break;
+      case "Add":
+        insertTeam($_POST['tName'], $_POST['tNumber']);
+        break;
   }
 }
   
