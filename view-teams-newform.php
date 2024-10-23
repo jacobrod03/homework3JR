@@ -21,7 +21,7 @@
               <input type="text" class="form-control" id="tName" name="tName">
             </div>
             <div class="mb-3">
-              <label for="tName" class="form-label">Team number</label>
+              <label for="tNumber" class="form-label">Team number</label>
               <input type="text" class="form-control" id="tNumber" name="tNumber">
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
