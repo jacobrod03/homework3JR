@@ -30,7 +30,16 @@ function selectTeamsByPlayer($pid) {
 }
 //might not need?
 function insertLeagues($pid, $tid, $season, $location, $daytime) {
-    
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("");
+        $stmt->bind_param("iisss", $pid, $tid, $season, $location, $daytime); 
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
     }
 }
 ?>
