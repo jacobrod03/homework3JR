@@ -11,7 +11,7 @@ if (isset($_POST['actionType'])) {
         if (insertTeam($_POST['tName'], $_POST['tNumber'])) {
           echo '<div class="alert alert-success" role="alert">Team added.</div>"';
         } else {
-          echo '<div class="alert alert-danger" role="alert">Error.</div>"';
+          echo '<div class="alert alert-danger" role="alert">Error.</div>';
         }
         break;
   }
