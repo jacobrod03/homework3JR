@@ -24,7 +24,7 @@
               <label for="tNumber<?php echo $team['team_id']; ?>" class="form-label">Team number</label>
               <input type="text" class="form-control" id="tNumber<?php echo $team['team_id']; ?>" name="tNumber" value="<?php echo $team['team_number']; ?>">
             </div>
-                <input type="hidden" name="tNumber" value="<?php echo $team['team_id']; ?>">
+                <input type="hidden" name="tid" value="<?php echo $team['team_id']; ?>">
                 <input type="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
           </form>
