@@ -28,6 +28,9 @@ function selectTeamsByPlayer($pid) {
         throw $e;
     }
 }
-
-function insertLeagues
+//might not need?
+function insertLeagues($pid, $tid, $season, $location, $daytime) {
+    
+    }
+}
 ?>
