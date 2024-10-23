@@ -46,7 +46,7 @@ function insertLeagues($pid, $tid, $season, $location, $daytime) {
 function updateLeagues($pid, $tid, $season, $location, $daytime, $lid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3`.`league` (`league_id`, `player_id`, `team_id`, `season`, `location`, `daytime`) VALUES (?, ?, ?, ?, ?, ?);");
+        $stmt = $conn->prepare("");
         $stmt->bind_param("iisssi", $pid, $tid, $season, $location, $daytime, $lid); 
         $success = $stmt->execute();
         $conn->close();
