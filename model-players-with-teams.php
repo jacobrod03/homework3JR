@@ -32,7 +32,7 @@ function selectTeamsByPlayer($pid) {
 function insertLeagues($pid, $tid, $season, $location, $daytime) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("");
+        $stmt = $conn->prepare("INSERT INTO `hw3`.`league` (`league_id`, `player_id`, `team_id`, `season`, `location`, `daytime`) VALUES ('5', '4', '4', 'spring 1986', 'New York, NY', '8 PM');");
         $stmt->bind_param("iisss", $pid, $tid, $season, $location, $daytime); 
         $success = $stmt->execute();
         $conn->close();
