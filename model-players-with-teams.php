@@ -42,4 +42,18 @@ function insertLeagues($pid, $tid, $season, $location, $daytime) {
         throw $e;
     }
 }
+
+function updateLeagues($pid, $tid, $season, $location, $daytime, $lid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `hw3`.`league` (`league_id`, `player_id`, `team_id`, `season`, `location`, `daytime`) VALUES (?, ?, ?, ?, ?, ?);");
+        $stmt->bind_param("iisssi", $pid, $tid, $season, $location, $daytime, $lid); 
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
