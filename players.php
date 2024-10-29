@@ -7,7 +7,7 @@ include "view-header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
-    case "Add";
+    case "Add":
       insertPlayer($_POST['cName'], $_POST['cNumber']);
       break;
   }
