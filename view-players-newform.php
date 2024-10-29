@@ -24,6 +24,7 @@
           <label for="pNumber" class="form-label">Player number</label>
           <input type="text" class="form-control" id="pNumber" name="pNumber">
         </div>
+            <input type="hidden" name="actionType" value="Add">
         <button type="submit" class="btn btn-primary">Save</button>
       </form>
       </div>
