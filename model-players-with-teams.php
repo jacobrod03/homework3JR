@@ -28,21 +28,4 @@ function selectTeamsByPlayer($pid) {
         throw $e;
     }
 }
-
-?>
-<?php
-function insertTeamsByPlayer($pid) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3`.`player` (`player_name`, `player_number`) VALUES (?, ?)");
-        $stmt->bind_param("i", $pid); 
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
 ?>
