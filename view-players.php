@@ -29,7 +29,9 @@ while ($player = $players->fetch_assoc()) {
     <td><?php echo $player['player_name']; ?></td>
     <td><?php echo $player['player_number']; ?></td>
     <td>
-      
+<?php
+include "view-players-editform.php";
+?>
     </td>
     <td>
       <form method="post" action="">
