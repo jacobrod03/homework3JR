@@ -34,7 +34,7 @@ function selectTeamsByPlayer($pid) {
 function insertTeamsByPlayer($pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT t.team_id, team_name, team_number, season, location, daytime FROM team t join league l on l.team_id = t.team_id where l.player_id = ?");
+        $stmt = $conn->prepare("INSERT INTO `hw3`.`player` (`player_name`, `player_number`) VALUES (?, ?)");
         $stmt->bind_param("i", $pid); 
         $stmt->execute();
         $result = $stmt->get_result();
