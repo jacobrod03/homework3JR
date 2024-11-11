@@ -1,5 +1,5 @@
 <?php
-function selectLeague() {
+function selectLeaguesbyPlayer() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT l.league_id, season, location, daytime FROM league l join player p on p.player_id = l.player_id where p.player_id=?");
