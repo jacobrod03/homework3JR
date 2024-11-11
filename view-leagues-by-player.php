@@ -7,7 +7,6 @@
       <th>Season</th>
       <th>Location</th>
       <th>Daytime</th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
