@@ -3,7 +3,7 @@ function selectLeaguesbyPlayer($pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT l.league_id, season, location, daytime FROM league l join player p on p.player_id = l.player_id where p.player_id=?");
-        $stmt->bind_param("s", $pid);
+        $stmt->bind_param("i", $pid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
