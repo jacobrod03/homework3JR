@@ -1,5 +1,5 @@
 <?php
-function selectLeague() {
+function selectLeagues() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT league_id, season, location FROM league");
