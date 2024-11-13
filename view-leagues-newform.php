@@ -16,12 +16,12 @@
       <div class="modal-body">
         <form method="post" action="">
       <div class="mb-3">
-        <label for="player_id" class="form-label">Player ID</label>
-        <input type="int" class="form-control" id="player_id" name="player_id">
+        <label for="season" class="form-label">Season</label>
+        <input type="text" class="form-control" id="season" name="season">
       </div>
      <div class="mb-3">
-        <label for="team_id" class="form-label">Team ID</label>
-        <input type="int" class="form-control" id="team_id" name="team_id">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" name="location">
       </div>
       <button type="submit" class="btn btn-primary">Save</button>
     </form>
