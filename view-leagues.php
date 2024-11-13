@@ -17,7 +17,7 @@ while ($league = $leagues->fetch_assoc()) {
     <td><?php echo $league['league_id']; ?></td>
     <td><?php echo $league['season']; ?></td>
     <td><?php echo $league['location']; ?></td>
-    <td><a href="player-by-league.php?id=<?php echo $league['league_id']; ?>">Players</a></td>
+    <td><a href="leagues-by-player.php?id=<?php echo $league['league_id']; ?>">Players</a></td>
   </tr>
 <?php
 }
