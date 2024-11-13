@@ -13,11 +13,11 @@ function selectLeagues() {
     }
 }
 
-function insertLeagues($pid, $tid, $season, $location, $daytime) {
+function insertLeagues($season, $location) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3`.`league` (`player_id`, `team_id`, `season`, `location`, `daytime`) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("iisss", $pid, $tid, $season, $location, $daytime);
+        $stmt = $conn->prepare("INSERT INTO `hw3`.`league` (`season`, `location`) VALUES (?, ?)");
+        $stmt->bind_param("ss", $season, $location);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertLeagues($pid, $tid, $season, $location, $daytime) {
     }
 }
 
-function updateLeagues($pid, $tid, $season, $location, $daytime, $lid) {
+function updateLeagues($season, $location, $lid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `hw3`.`league` set `player_id` = ?, `team_id` = ?, `season` = ?, `location` = ?, `daytime` = ? where league_id = ?");
-        $stmt->bind_param("iisssi", $pid, $tid, $season, $location, $daytime, $lid);
+        $stmt = $conn->prepare("update `hw3`.`league` set `season` = ?, `location` = ? where league_id = ?");
+        $stmt->bind_param("ssi", $season, $location, $lid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
