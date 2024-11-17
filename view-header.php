@@ -31,6 +31,9 @@
         <li class="nav-item">
           <a class="nav-link" href="players-with-teams.php">Players with teams</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="players-with-teams.php">Stats</a>
+        </li>
       </ul>
     </div>
   </div>
