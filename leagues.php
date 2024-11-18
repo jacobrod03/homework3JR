@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-    insertLeagues($_POST['season'], $_POST['location']);
+    if (insertLeagues($_POST['season'], $_POST['location']);
     break;
   }
 }
