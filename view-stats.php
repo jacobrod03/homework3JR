@@ -5,7 +5,8 @@
       <tr>
       <th>ID</th>
       <th>Hits</th>
-      <th>Errors</th> 
+      <th>Errors</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@ while ($stat = $stats->fetch_assoc()) {
     <td><?php echo $stat['stats_id']; ?></td>
     <td><?php echo $stat['stats_hits']; ?></td>
     <td><?php echo $stat['stats_errors']; ?></td>
+    <td><a href="players-by-stats.php">Players</a></td>
   </tr>
 <?php
 }
