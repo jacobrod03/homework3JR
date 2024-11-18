@@ -16,7 +16,7 @@ function selectLeagues() {
 function insertLeagues($Sseason, $Llocation) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3`.`league`(season, location) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `hw3`.`league`(`season`, `location`) VALUES (?, ?)");
         $stmt->bind_param("ss", $Sseason, $Llocation);
         $success = $stmt->execute();
         $conn->close();
