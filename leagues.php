@@ -9,9 +9,9 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
     if (insertLeagues($_POST['Sseason'], $_POST['Llocation'])) {
-      echo '<div class="alert alert-success" role="alert"> League added!</div>"';
+      echo '<div class="alert alert-success" role="alert"> League added!</div>';
     } else {
-      echo '<div class="alert alert-danger" role="alert"> Error. </div>"';
+      echo '<div class="alert alert-danger" role="alert"> Error. </div>';
     }
     break;
   }
