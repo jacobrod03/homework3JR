@@ -29,7 +29,9 @@ while ($league = $leagues->fetch_assoc()) {
     <td><?php echo $league['season']; ?></td>
     <td><?php echo $league['location']; ?></td>
     <td>
-      
+<?php 
+include "view-leagues-editform.php";
+?>
     </td>
     <td>
       <form method="post" action="">
