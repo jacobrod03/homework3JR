@@ -16,7 +16,7 @@ function selectStats() {
 function insertStats() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare(INSERT INTO `hw3`.`stats` (`stats_hits`, `stats_errors`) VALUES ('5', '6'););
+        $stmt = $conn->prepare("INSERT INTO `hw3`.`stats` (`stats_hits`, `stats_errors`) VALUES ('5', '6')");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
