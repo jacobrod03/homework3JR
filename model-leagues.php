@@ -27,11 +27,11 @@ function insertLeagues($Sseason, $Llocation) {
     }
 }
 
-function updateLeagues($season, $location, $lid) {
+function updateLeagues($Sseason, $Llocation, $lid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `hw3`.`league` set `season` = ?, `location` = ? where league_id = ?");
-        $stmt->bind_param("ssi", $season, $location, $lid);
+        $stmt->bind_param("ssi", $Sseason, $Llocation, $lid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
