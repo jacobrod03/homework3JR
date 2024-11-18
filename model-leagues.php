@@ -13,11 +13,11 @@ function selectLeagues() {
     }
 }
 
-function insertLeagues($season, $location) {
+function insertLeagues($Sseason, $Llocation) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO league (season, location) VALUES (?, ?)");
-        $stmt->bind_param("ss", $season, $location);
+        $stmt->bind_param("ss", $Sseason, $Llocation);
         $success = $stmt->execute();
         $conn->close();
         return $success;
