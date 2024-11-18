@@ -32,7 +32,10 @@ while ($league = $leagues->fetch_assoc()) {
       
     </td>
     <td>
-      
+      <form method="post" action="leagues-by-player.php">
+        <input type="hidden" name="lid" value="<?php echo $leagues['league_id']; ?>">
+        <button type="submit" class="btn btn-primary">Leagues</button>
+      </form>
     </td>
     <td><a href="leagues-by-player.php?id=<?php echo $league['league_id']; ?>">Players</a></td>
   </tr>
