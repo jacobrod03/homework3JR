@@ -29,6 +29,9 @@
           <a class="nav-link" href="leagues.php">Leagues</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="stats.php">Stats</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="players-with-teams.php">Players with teams</a>
         </li>
       </ul>
