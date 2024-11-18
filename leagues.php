@@ -8,7 +8,11 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-    insertLeagues($_POST['Sseason'], $_POST['Llocation']);
+    if (insertLeagues($_POST['Sseason'], $_POST['Llocation'])) {
+      echo '<div class="alert alert-success" role="alert"> League added!</div>"';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error. </div>"';
+    }
     break;
   }
 }
