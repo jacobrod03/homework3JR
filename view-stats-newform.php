@@ -24,6 +24,7 @@
               <label for="sErrors" class="form-label">Stats errors</label>
               <input type="text" class="form-control" id="sErrors" name="sErrors">
             </div>
+          <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
