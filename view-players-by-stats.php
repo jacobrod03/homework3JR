@@ -7,7 +7,6 @@
       <th>Hits</th>
       <th>Errors</th>
       <th>Location</th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
