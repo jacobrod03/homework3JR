@@ -18,7 +18,6 @@ while ($stat = $stats->fetch_assoc()) {
     <td><?php echo $stat['stats_hits']; ?></td>
     <td><?php echo $stat['stats_errors']; ?></td>
     <td><?php echo $stat['location']; ?></td>
-    <td><a href="players-by-stats.php?id=<?php echo $stat['stats_id']; ?>">Players</a></td>
   </tr>
 <?php
 }
