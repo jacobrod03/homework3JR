@@ -1,8 +1,8 @@
 <?php 
-function selectStats() {
+function selectPlayersByStats() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT stats_id, stats_hits, stats_errors FROM stats");
+        $stmt = $conn->prepare("SELECT s.stats_id, stats_hits, stats_errors, location FROM stats s join league l on l.stats_id = s.stats_id WHERE l.player_id = ?");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
