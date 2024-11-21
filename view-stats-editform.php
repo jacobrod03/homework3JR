@@ -6,24 +6,24 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editStatsModal<?php echo $stat['stats_id]; ?>" tabindex="-1" aria-labelledby="editStatsModalLabel<?php echo $stat['stats_id]; ?>" aria-hidden="true">
+<div class="modal fade" id="editStatsModal<?php echo $stat['stats_id']; ?>" tabindex="-1" aria-labelledby="editStatsModalLabel<?php echo $stat['stats_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editStatsModalLabel<?php echo $stat['stats_id]; ?>">Edit stats</h1>
+        <h1 class="modal-title fs-5" id="editStatsModalLabel<?php echo $stat['stats_id']; ?>">Edit stats</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
             <div class="mb-3">
-              <label for="sHits<?php echo $stat['stats_id]; ?>" class="form-label">Stats hits</label>
-              <input type="text" class="form-control" id="sHits<?php echo $stat['stats_id]; ?>" name="sHits" value="<?php echo $stat['stats_hits]; ?>">
+              <label for="sHits<?php echo $stat['stats_id']; ?>" class="form-label">Stats hits</label>
+              <input type="text" class="form-control" id="sHits<?php echo $stat['stats_id']; ?>" name="sHits" value="<?php echo $stat['stats_hits']; ?>">
             </div>
             <div class="mb-3">
-              <label for="sErrors<?php echo $stat['stats_id]; ?>" class="form-label">Stats errors</label>
-              <input type="text" class="form-control" id="sErrors<?php echo $stat['stats_id]; ?>" name="sErrors" value="<?php echo $stat['stats_errors]; ?>">
+              <label for="sErrors<?php echo $stat['stats_id']; ?>" class="form-label">Stats errors</label>
+              <input type="text" class="form-control" id="sErrors<?php echo $stat['stats_id']; ?>" name="sErrors" value="<?php echo $stat['stats_errors']; ?>">
             </div>
-          <input type="hidden" name="sid" value="<?php echo $stat['stats_errors]; ?>">
+          <input type="hidden" name="sid" value="<?php echo $stat['stats_errors']; ?>">
           <input type="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
