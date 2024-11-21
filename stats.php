@@ -8,7 +8,11 @@ include "view-header.php";
 if (isset($_POST['actionType'])){
   switch ($_POST['actionType']) {
     case "Add":
-      insertStats($_POST['sHits'], $_POST['sErrors']);
+      if (insertStats($_POST['sHits'], $_POST['sErrors'])) {
+        echo '<div class="alert alert-success" role="alert">Stats added! </div>';
+      } else {
+        echo '<div class="alert alert-danger" role="alert">Error! </div>';
+      }
       break;
   }
 }
