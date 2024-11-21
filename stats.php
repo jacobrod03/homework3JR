@@ -13,6 +13,12 @@ if (isset($_POST['actionType'])){
       } else {
         echo '<div class="alert alert-danger" role="alert">Error! </div>';
       }
+    case "Edit":
+      if (updateStats($_POST['sHits'], $_POST['sErrors'], $_POST['sid'])) {
+        echo '<div class="alert alert-success" role="alert">Stats edited! </div>';
+      } else {
+        echo '<div class="alert alert-danger" role="alert">Error! </div>';
+      }
       break;
     case "Delete":
       if (deleteStats($_POST['sid'])) {
