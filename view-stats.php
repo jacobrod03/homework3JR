@@ -28,7 +28,9 @@ while ($stat = $stats->fetch_assoc()) {
     <td><?php echo $stat['stats_hits']; ?></td>
     <td><?php echo $stat['stats_errors']; ?></td>
     <td>
-      
+<?php
+include "view-stats-editform.php";
+?>
     </td>
     <td>
       <form method="post" action="">
