@@ -1,6 +1,9 @@
-<select class="form-select" id=>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select" id="tName" name="tName">
+<?php 
+while ($teamItem = $teamList->fetch_assoc()) {
+?>
+  <option value="<?php echo $teamItem['tName']; ?>"><?php echo $teamItem['tName']; ?></option>
+<?php 
+}
+?>
 </select>
