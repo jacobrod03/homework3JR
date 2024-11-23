@@ -54,4 +54,18 @@ function deleteTeam($tid) {
         throw $e;
     }
 }
+
+function selectTeamForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT team_id, team_name FROM team order by team_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
