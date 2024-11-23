@@ -1,8 +1,8 @@
-<select class="form-select" id="team_id" name="team_id">
+<select class="form-select" id="tid" name="tid">
 <?php 
 while ($teamItem = $teamList->fetch_assoc()) {
 ?>
-  <option value="<?php echo $teamItem['team_id']; ?>"><?php echo $teamItem['tName']; ?></option>
+  <option value="<?php echo $teamItem['team_id']; ?>"><?php echo $teamItem['team_name']; ?></option>
 <?php 
 }
 ?>
